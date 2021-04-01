@@ -20,3 +20,8 @@ if [[ $1 == "get-ca" ]]; then
     O_DIR=/output
     cp pki/ca.crt ${O_DIR}/
 fi
+
+if [[ $1 == "revoke" ]]; then
+    O_DIR=/output
+    ./revoke_full $2
+fi
