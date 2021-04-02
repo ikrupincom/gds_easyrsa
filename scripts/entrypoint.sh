@@ -23,5 +23,7 @@ fi
 
 if [[ $1 == "revoke" ]]; then
     O_DIR=/output
-    ./revoke_full $2
+    easyrsa revoke $2
+    easyrsa gen-crl
+    cp pki/crl.pem ${O_DIR}/
 fi
