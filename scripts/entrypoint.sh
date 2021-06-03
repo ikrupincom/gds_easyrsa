@@ -4,6 +4,7 @@ cd ${EASYRSA_DIR}
 
 if [[ $1 == "init" ]]; then
     cp /input/vars ${EASYRSA_DIR}/
+    cat vars
     ./easyrsa init-pki
     ./easyrsa build-ca
 fi
